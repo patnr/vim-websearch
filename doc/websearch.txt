@@ -5,15 +5,13 @@ License: MIT
 
 Defines the following maps acting on the word-under-cursor, or visually selected.
 
-maps       | function
----------- | ----------------
-`gx`, `gX` | Open using system's generic resouce opener (useful for e.g. url's)
-`go`, `gO` | Google search
-`g0`, `g=` | "I feel lucky" search
-`gs`, `gS` | Thesaurus/synonym lookup
+word map | WORD map | functionality
+-------- | -------- | -------------
+`gx`     | `gX`     | Open (e.g. url or image file) using system's resource opener
+`go`     | `gO`     | Google search
+`g0`     | `g=`     | "I feel lucky" search
+`gs`     | `gS`     | Thesaurus/synonym lookup
 
-The upper-case versions are used for big/WORD-delimitation.
-
-It also defines the `:Uni` command which helps you search for unicode symbols.
+Also, use `:Uni <searchterm>` to search for unicode symbols via Google.
 
 vim:tw=78:ts=8:et:ft=help:norl:
