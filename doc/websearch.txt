@@ -1,5 +1,7 @@
-Vim-websearch
-=============
+*websearch.txt*  For Vim version 7.4 or later
+
+Author:  Patric N. Raanes
+License: MIT
 
 Defines the following maps acting on the word-under-cursor, or visually selected.
 
@@ -12,5 +14,6 @@ maps       | function
 
 The upper-case versions are used for big/WORD-delimitation.
 
-
 It also defines the `:Uni` command which helps you search for unicode symbols.
+
+vim:tw=78:ts=8:et:ft=help:norl:
