@@ -40,6 +40,7 @@ function! WebSearch(type, searchterm="empty")
     elseif a:type == "thes"
         silent! exec opener " \"https://www.thesaurus.com/browse/" . searchterm . "\" &"
     endif
+
     " Fix screen corruption
     if (g:mysys == "tunix") || (g:mysys == "mac")
         sleep 200m | redraw! | redraw!
