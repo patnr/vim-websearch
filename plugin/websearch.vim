@@ -42,9 +42,8 @@ function! WebSearch(type, searchterm="empty")
     endif
 
     " Fix screen corruption
-    if (g:mysys == "tunix") || (g:mysys == "mac")
-        sleep 200m | redraw! | redraw!
-    endif
+    " Seems to be necessary in terminal/vim and macvim (but not gvim)
+    sleep 200m | redraw! | redraw!
 endfunction
 
 
