@@ -7,7 +7,7 @@ Defines the following maps acting on the word-under-cursor, or visually selected
 
 word map | WORD map | functionality
 -------- | -------- | -------------
-`gx`     | `gX`     | Open (e.g. url or image file) using system's resource opener
+`gx`     | `gX`     | Open url using system's resource opener
 `go`     | `gO`     | Google search
 `g0`     | `g=`     | "I feel lucky" search
 `gt`     | `gT`     | Thesaurus/synonym lookup
