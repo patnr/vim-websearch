@@ -17,3 +17,7 @@ Answer: Yeah, it's pretty trivial. I just found it convenient to centralize
 this functionality because they all run into the same issue:
 In my experience vim-netrw's `gx` is often buggy/broken,
 depending on platform and vim version.
+
+Alternatives:
+- [reddit/vim](https://old.reddit.com/r/vim/search?q=netrw+gx&sort=relevance&t=all)
+- [open-browser.vim](https://github.com/tyru/open-browser.vim)
