@@ -23,17 +23,17 @@ function! WebSearch(type, searchterm="empty")
 
     " Case
     if a:type == "open"
-        let searchterm = searchterm
+        let prefix = ""
     elseif a:type == "lucky"
-        let searchterm = "https://duckduckgo.com/?q=\\!ducky+" . searchterm
+        let prefix = "https://duckduckgo.com/?q=\\!ducky+"
     elseif a:type == "google"
-        let searchterm = "http://google.com/search?q=" . searchterm
+        let prefix = "http://google.com/search?q="
     elseif a:type == "unicode"
-        let searchterm = "http://google.com/search?q=unicode+" . searchterm
+        let prefix = "http://google.com/search?q=unicode+"
     elseif a:type == "thes"
-        let searchterm = "https://www.thesaurus.com/browse/" . searchterm
+        let prefix = "https://www.thesaurus.com/browse/"
     endif
-    call s:VersionAwareNetrwBrowseX(searchterm)
+    call s:VersionAwareNetrwBrowseX(prefix . searchterm)
 endfunction
 
 
