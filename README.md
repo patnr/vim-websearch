@@ -7,7 +7,7 @@ word map | WORD map | functionality
 -------- | -------- | -------------
 `gx`     | `gX`     | Open url using system's resource opener
 `go`     | `gO`     | Google search
-`g0`     | `g=`     | "I feel lucky" search
+`g1`     | `g!`     | "I feel lucky" search
 `gt`     | `gT`     | Thesaurus/synonym lookup
 
 Also, use `:Uni <searchterm>` to search for unicode symbols via Google.

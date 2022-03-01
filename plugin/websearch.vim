@@ -45,9 +45,9 @@ nnoremap go viw"ay:call WebSearch("google")<CR>
 nnoremap gO viW"ay:call WebSearch("google")<CR>
 vnoremap go    "ay:call WebSearch("google")<CR>
 " Lucky
-nnoremap g0 viw"ay:call WebSearch("lucky")<CR>
-nnoremap g= viW"ay:call WebSearch("lucky")<CR>
-vnoremap g0    "ay:call WebSearch("lucky")<CR>
+nnoremap g1 viw"ay:call WebSearch("lucky")<CR>
+nnoremap g! viW"ay:call WebSearch("lucky")<CR>
+vnoremap g1    "ay:call WebSearch("lucky")<CR>
 " gx fix
 nnoremap gx viw"ay:call WebSearch("open")<CR>
 nnoremap gX viW"ay:call WebSearch("open")<CR>
