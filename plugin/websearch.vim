@@ -4,22 +4,16 @@ if exists('g:loaded_websearch')
 endif
 let g:loaded_websearch = 1
 
-
-if !exists("g:websearch_opener")
-  if has("win32")
-    let g:websearch_opener = "start"
-  "elseif substitute(system('uname'), "\n", "", "") == 'Darwin'
-  elseif has('mac')
-    let g:websearch_opener = "open"
-  else
-    let g:websearch_opener = "xdg-open"
-  endif
-endif
-
+" From plasticboy/vim-markdown:ftplugin/markdown.vim
+function! s:VersionAwareNetrwBrowseX(url)
+    if has('patch-7.4.567')
+        call netrw#BrowseX(a:url, 0)
+    else
+        call netrw#NetrwBrowseX(a:url, 0)
+    endif
+endf
 
 function! WebSearch(type, searchterm="empty")
-    let opener = "silent! !" . g:websearch_opener
-
     " Set searchterm
     if a:searchterm == "empty"
         let searchterm = getreg("a")
@@ -27,23 +21,19 @@ function! WebSearch(type, searchterm="empty")
         let searchterm = a:searchterm
     endif
 
-
     " Case
     if a:type == "open"
-        silent! exec opener '"' . searchterm . '" &'
+        let searchterm = searchterm
     elseif a:type == "lucky"
-        silent! exec opener " \"https://duckduckgo.com/?q=\\!ducky+" . searchterm . "\" &"
+        let searchterm = "https://duckduckgo.com/?q=\\!ducky+" . searchterm
     elseif a:type == "google"
-        silent! exec opener " \"http://google.com/search?q=" . searchterm . "\" &"
+        let searchterm = "http://google.com/search?q=" . searchterm
     elseif a:type == "unicode"
-        silent! exec opener " \"http://google.com/search?q=unicode+" . searchterm . "\" &"
+        let searchterm = "http://google.com/search?q=unicode+" . searchterm
     elseif a:type == "thes"
-        silent! exec opener " \"https://www.thesaurus.com/browse/" . searchterm . "\" &"
+        let searchterm = "https://www.thesaurus.com/browse/" . searchterm
     endif
-
-    " Fix screen corruption
-    " Seems to be necessary in terminal/vim and macvim (but not gvim)
-    sleep 200m | redraw! | redraw!
+    call s:VersionAwareNetrwBrowseX(searchterm)
 endfunction
 
 
@@ -63,8 +53,9 @@ nnoremap gx viw"ay:call WebSearch("open")<CR>
 nnoremap gX viW"ay:call WebSearch("open")<CR>
 vnoremap gx    "ay:call WebSearch("open")<CR>
 " Thesaurus
-nnoremap gs viw"ay:call WebSearch("thes")<CR>
-vnoremap gs    "ay:call WebSearch("thes")<CR>
+nnoremap gt viw"ay:call WebSearch("thes")<CR>
+nnoremap gT viW"ay:call WebSearch("thes")<CR>
+vnoremap gt    "ay:call WebSearch("thes")<CR>
 " Unicode
 command! -nargs=* Uni call WebSearch("unicode", <q-args>)
 " Browse math/alpha: https://www.compart.com/en/unicode/block/U+1D400
