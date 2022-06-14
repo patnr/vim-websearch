@@ -21,3 +21,4 @@ depending on platform and vim version.
 Alternatives:
 - [reddit/vim](https://old.reddit.com/r/vim/search?q=netrw+gx&sort=relevance&t=all)
 - [open-browser.vim](https://github.com/tyru/open-browser.vim)
+- [fern](https://github.com/lambdalisue/fern.vim/blob/951a05d3f6ebc785db728ccfdf1759a2cf7c15ff/doc/fern.txt#L89)
