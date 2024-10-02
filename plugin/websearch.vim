@@ -41,21 +41,17 @@ endfunction
 "  Mappings  "
 """"""""""""""
 " Google
-nnoremap <leader>sg viw"ay:call WebSearch("google")<CR>
-nnoremap <leader>Sg viW"ay:call WebSearch("google")<CR>
-vnoremap <leader>sg    "ay:call WebSearch("google")<CR>
+nnoremap <leader>wg viw"ay:call WebSearch("google")<CR>
+nnoremap <leader>Wg viW"ay:call WebSearch("google")<CR>
+vnoremap <leader>wg    "ay:call WebSearch("google")<CR>
 " Lucky
-nnoremap <leader>s1 viw"ay:call WebSearch("lucky")<CR>
-nnoremap <leader>S1 viW"ay:call WebSearch("lucky")<CR>
-vnoremap <leader>s1    "ay:call WebSearch("lucky")<CR>
-" gx fix
-nnoremap <leader>gx viw"ay:call WebSearch("open")<CR>
-nnoremap <leader>Gx viW"ay:call WebSearch("open")<CR>
-vnoremap <leader>gx    "ay:call WebSearch("open")<CR>
+nnoremap <leader>w1 viw"ay:call WebSearch("lucky")<CR>
+nnoremap <leader>W1 viW"ay:call WebSearch("lucky")<CR>
+vnoremap <leader>w1    "ay:call WebSearch("lucky")<CR>
 " Thesaurus
-nnoremap <leader>st viw"ay:call WebSearch("thes")<CR>
-nnoremap <leader>St viW"ay:call WebSearch("thes")<CR>
-vnoremap <leader>st    "ay:call WebSearch("thes")<CR>
+nnoremap <leader>wt viw"ay:call WebSearch("thes")<CR>
+nnoremap <leader>Wt viW"ay:call WebSearch("thes")<CR>
+vnoremap <leader>wt    "ay:call WebSearch("thes")<CR>
 " Unicode
 command! -nargs=* Uni call WebSearch("unicode", <q-args>)
 " Browse math/alpha: https://www.compart.com/en/unicode/block/U+1D400

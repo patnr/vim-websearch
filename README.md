@@ -5,10 +5,9 @@ Defines the following maps acting on the word-under-cursor, or visually selected
 
 word map | WORD map | functionality
 -------- | -------- | -------------
-`gx`     | `gX`     | Open url using system's resource opener
-`go`     | `gO`     | Google search
-`g1`     | `g!`     | "I feel lucky" search
-`gt`     | `gT`     | Thesaurus/synonym lookup
+`wg`     | `Wg`     | Google search
+`w1`     | `W1`     | "I feel lucky" search
+`wt`     | `Wt`     | Thesaurus/synonym lookup
 
 Also, use `:Uni <searchterm>` to search for unicode symbols via Google.
 
