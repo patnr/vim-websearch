@@ -55,3 +55,17 @@ vnoremap <leader>wt    "ay:call WebSearch("thes")<CR>
 " Unicode
 command! -nargs=* Uni call WebSearch("unicode", <q-args>)
 " Browse math/alpha: https://www.compart.com/en/unicode/block/U+1D400
+
+lua << EOF
+  local ok, wk = pcall(require, 'which-key')
+  if ok then
+    wk.add({
+    {'<leader>wg', icon=""},
+    {'<leader>w1', icon="󰼏"},
+    {'<leader>wt', icon=""},
+    {'<leader>Wg', icon=""},
+    {'<leader>W1', icon="󰼏"},
+    {'<leader>Wt', icon=""},
+    })
+  end
+EOF
