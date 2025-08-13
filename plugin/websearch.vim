@@ -43,15 +43,15 @@ endfunction
 " Google (`gb` coz ???)
 nnoremap gb viw"ay:call WebSearch("google")<CR>
 nnoremap gB viW"ay:call WebSearch("google")<CR>
-vnoremap gb "ay:call WebSearch("google")<CR>
+xnoremap gb "ay:call WebSearch("google")<CR>
 " Lucky (`g1` coz 'first')
 nnoremap g1 viw"ay:call WebSearch("lucky")<CR>
 nnoremap g! viW"ay:call WebSearch("lucky")<CR>
-vnoremap g1    "ay:call WebSearch("lucky")<CR>
+xnoremap g1    "ay:call WebSearch("lucky")<CR>
 " Thesaurus (`g=` coz `z=` lists spell suggestions)
 nnoremap g= viw"ay:call WebSearch("thes")<CR>
 nnoremap g= viW"ay:call WebSearch("thes")<CR>
-vnoremap g=    "ay:call WebSearch("thes")<CR>
+xnoremap g=    "ay:call WebSearch("thes")<CR>
 " Unicode
 command! -nargs=* Uni call WebSearch("unicode", <q-args>)
 " Browse math/alpha: https://www.compart.com/en/unicode/block/U+1D400
